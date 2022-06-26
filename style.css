@@ -3,10 +3,21 @@
     padding: 0;
 }
 
+:root{
+    --primary-color: #edf2fc;
+    --secondary-color: #212121;
+    --main-clor: #ff4321;
+}
+
+.dark-theme{
+    --primary-color: #000106;
+    --secondary-color: #fff;
+}
+
 .hero{
     height: 100vh;
     width: 100%;
-    background: #edf2fc;
+    background: var(--primary-color);
     font-family: sans-serif;
     position: relative;
 }
@@ -26,6 +37,11 @@ nav{
     cursor: pointer;
 }
 
+nav ul{
+    flex: 1;
+    text-align: right;
+}
+
 nav ul li{
     display: inline-block;
     list-style: none;
@@ -35,39 +51,44 @@ nav ul li{
 
 nav ul li a{
     text-decoration: none;
-    color: #606163;
+    color: var(--secondary-color);
 }
 
 nav ul li a:hover, nav ul li:hover{
-    color: #ff4321;
+    color: var(--main-clor);
     transform: translateY(-7px);
+}
+
+#icon{
+    width: 30px;
+    cursor: pointer;
 }
 
 .info{
     margin-left: 8%;
-    margin-top: 15%;
+    margin-top: 10%;
 }
 
 .info h1{
     font-size: 70px;
-    color: #212121;
+    color: var(--secondary-color);
     margin-bottom: 20px;
 }
 
 .info h1 span{
-    color: #ff4321;
+    color: var(--main-clor);
 }
 
 .info p{
-    color: #606163;
+    color: var(--secondary-color);
     line-height: 22px;
 }
 
 .info a{
-    background: #212121;
+    background: var(--secondary-color);
     padding: 10px 18px;
     text-decoration: none;
-    color: #fff;
+    color: var(--primary-color);
     display: inline-block;
     margin: 30px 0;
     border-radius: 5px;
@@ -87,7 +108,7 @@ nav ul li a:hover, nav ul li:hover{
     left: 50%;
     bottom: 0;
     transform: translateX(-50%);
-    transition: all 0.5s;
+    transition: all 1s;
 }
 
 .img-box:hover .back-img{
@@ -100,12 +121,12 @@ nav ul li a:hover, nav ul li:hover{
 
 .social-links{
     margin-left: 8%;
-    margin-top: 100px;
+    margin-top: 100px;  
 }
 
 .social-links a{
     font-size: 30px;
-    color: #606163;
+    color: var(--secondary-color);
     margin-right: 20px;
     transition: all 0.5s;
 }
@@ -115,7 +136,7 @@ nav ul li a:hover, nav ul li:hover{
 }
 
 .social-links a:hover, .social-links a .fa:hover{
-    color: #ff4321;
+    color: var(--main-clor);
     transform: translateY(-7px);
 }
 
